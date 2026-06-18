@@ -1,0 +1,23 @@
+# Git attributes for a personal-knowledge-system (consumer) repo.
+# Seeded from the KAG skills engine so a newly bootstrapped consumer repo
+# inherits append-only-ledger union where its stores actually live (the engine
+# repo's .gitattributes does not reach into a consumer checkout). See the engine
+# strategy doc skill-building/strategy/2026-06-09-collision-prevention-generalization.md.
+
+# Normalize line endings.
+* text=auto eol=lf
+
+# Append-only ledger union (git built-in; no per-clone registration).
+# Union keeps both sides' appended lines instead of conflicting under concurrent
+# capture across worktrees. Known limit: union does not dedup or reorder;
+# consumers dedup by SHA on read.
+knowledge-base/commit-log.jsonl merge=union
+
+# NOTE (deferred, deliberate): per-store union for the append-only-with-
+# supersession stores (synthesis-store, evidence-store, and the like) is NOT
+# enabled here yet. It must be verified store-by-store first, because the
+# mutable-with-audit-trail stores (projects-store / PRJ-, taxonomy-items-store /
+# ITM-, print-design-store / PRD-) edit records in place and MUST NOT be unioned
+# (union would keep two divergent versions of the same record). A blanket
+# *-store.jsonl rule would wrongly catch those three. Enumerate the verified
+# append-only stores in a later pass rather than blanket-matching.

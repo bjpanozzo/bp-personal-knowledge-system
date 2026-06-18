@@ -1,0 +1,21 @@
+# Claude Code session-local state
+.claude/
+
+# Privacy logs: must stay local, never synced (privacy-gradient-policy 2.1/2.2)
+knowledge-base/privacy-unmask-log.jsonl
+knowledge-base/privacy-source-classifications.json
+
+# Secrets: never commit. .env is the only home for keys (for example an O*NET key for job-analysis).
+.env
+.env.local
+credentials.json
+token.json
+
+# Disposable scratch: regenerable, never a source of truth (and never the JSONL stores).
+.tmp/
+
+# OS / editor / build noise.
+node_modules/
+dist/
+*.log
+.DS_Store

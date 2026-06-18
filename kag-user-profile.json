@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "user_role": "pilot",
+  "display_name": "Brandon",
+  "operator_email": "bjpanozzo@gmail.com",
+  "featured_skill": "job-application-orchestrator",
+  "skill_scope": "job-search-curated",
+  "tour_enabled": true,
+  "created": "2026-06-04"
+}

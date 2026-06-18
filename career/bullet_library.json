@@ -1,0 +1,40 @@
+{
+  "_doc": "Resume bullet library read by resume-tailoring (skill #13). This is the RICH schema the engine consumes. Each bullet has a stable BK-NNN id, the role tags it targets, competencies, whether it carries a quantified metric, and ATS keywords. role_profiles maps a role tag to its default tagline and about-me text: a per-application config picks a role tag, and the engine resolves the tagline and about-me through role_profiles, so the ids referenced here (tagline_<tag>, about_<tag>) must match the entries in taglines and about_me_versions. Fill every bracketed [placeholder] with your real content during onboarding and add as many bullets as you need (each gets the next free BK-NNN id and status \"active\"). resume-tailoring refuses to run while the bullets list is empty or any [bracket token] remains (the TD-051 placeholder guard). For a complete, filled, fictional worked example, see resume-tailoring/applications/_synthetic/career/bullet_library.json. No data here ever leaves your own PKS repo.",
+
+  "bullets": [
+    {
+      "id": "BK-001",
+      "text": "[One accomplishment, ideally with a number. Example: Cut order-processing time 35 percent by redesigning the fulfillment workflow.]",
+      "role_targets": ["[role-tag, e.g. operations]"],
+      "competencies": ["[competency, e.g. process-improvement]"],
+      "has_metric": true,
+      "ats_keywords": ["[keyword]", "[keyword]"],
+      "status": "active"
+    }
+  ],
+
+  "about_me_versions": [
+    {
+      "id": "about_[role-tag]",
+      "text": "[Two to four sentence professional summary for this role target. Lead with your years and scope, then what you own end to end. Leave a blank line to split it into two short paragraphs if you want.]"
+    }
+  ],
+
+  "taglines": [
+    {
+      "id": "tagline_[role-tag]",
+      "text": "[Headline line 1]\n[Headline line 2]\n[Headline line 3]",
+      "use_when": "[When to reach for this tagline, e.g. general operations and program-management roles]"
+    }
+  ],
+
+  "role_targets": ["[role-tag, e.g. operations]"],
+
+  "role_profiles": {
+    "[role-tag, e.g. operations]": {
+      "tagline": "tagline_[role-tag]",
+      "about_me_default": "about_[role-tag]",
+      "description": "[What kinds of roles this profile targets]"
+    }
+  }
+}
