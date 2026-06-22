@@ -21,7 +21,7 @@ A one-read map for any operator (human or agent) opening this repo. This repo is
 - **Deterministic scripts:** the engine's `tools/` inside the `skills/` submodule (stdlib-only, governed). This repo holds your data, not engine code.
 - **Disposable scratch:** `.tmp/` (gitignored, regenerable, never a source of truth). Distinct from the stores: scratch is throwaway, the stores are canonical. `inbox/` holds unprocessed captures (pending input, cleared as you process them; not scratch, and not yet a store).
 - **Secrets:** `.env` only (none committed; never commit a secret). `kag-user-profile.json` carries identity, not secrets.
-- **Shared skills:** the `skills/` submodule, pointing at `Kosek-Advisory-Group-LLC/skills`. Bump the reference deliberately to pull newer skills.
+- **Shared skills:** the `skills/` submodule, pointing at `Kosek-Advisory-Group-LLC/kag-pilot-skills`. Bump the reference deliberately to pull newer skills.
 
 ---
 
@@ -43,7 +43,7 @@ Your personal knowledge production system. Holds your stores, your domain invent
 
 ## What this repo is NOT
 
-- Not a shared skill ecosystem (that's `Kosek-Advisory-Group-LLC/skills`)
+- Not a shared skill ecosystem (that's `Kosek-Advisory-Group-LLC/kag-pilot-skills`)
 - Not a client engagement record (that's `kosek-consulting`)
 - Not a household personal record (that's a separate private repo if you maintain one)
 
@@ -114,7 +114,7 @@ your-personal-knowledge-system/
 ├── kag-user-profile.json        Identity + pilot-mode marker (from the .template)
 ├── .claude/                     Session hooks (from dot-claude/; gitignored)
 ├── docs/                        Onboarding: registrations + getting started
-├── skills/                      Submodule → Kosek-Advisory-Group-LLC/skills
+├── skills/                      Submodule → Kosek-Advisory-Group-LLC/kag-pilot-skills
 ├── knowledge-base/              Your operational stores
 │   ├── *.jsonl                  Per-store records
 │   ├── drafts/                  Skill #03 prose outputs
@@ -215,7 +215,7 @@ Three implicit design assumptions in the engine that new consumers must address 
 
 This repo is designed for exactly one named operator. Consumer identity resolves via `git config user.email`. The schema-touch gate, LEDGER- records, GOAL- records, and PICKUP- records all carry the operator email as the identity key. If two people share a single PKS repo instance, session ledger queries, goal tracking, and the hello brief will interleave records from both operators with no separation.
 
-**Correct multi-user architecture:** one PKS repo per operator (naming: `<user>-personal-knowledge-system`), each pointing at the same shared `Kosek-Advisory-Group-LLC/skills` submodule. The skills engine is content-agnostic and shared; the stores are per-operator and private.
+**Correct multi-user architecture:** one PKS repo per operator (naming: `<user>-personal-knowledge-system`), each pointing at the same shared `Kosek-Advisory-Group-LLC/kag-pilot-skills` submodule. The skills engine is content-agnostic and shared; the stores are per-operator and private.
 
 There is no current migration path for splitting a shared PKS into two. Do not attempt to run two operators against one PKS.
 
@@ -277,7 +277,7 @@ Lattice-standard SOPs this repo participates in. The automated part is wired by 
 
 ## Cross-references
 
-- **Shared skill ecosystem:** [https://github.com/Kosek-Advisory-Group-LLC/skills](https://github.com/Kosek-Advisory-Group-LLC/skills)
+- **Shared skill ecosystem:** [https://github.com/Kosek-Advisory-Group-LLC/kag-pilot-skills](https://github.com/Kosek-Advisory-Group-LLC/kag-pilot-skills)
 - **Sister personal repos:** [TEMPLATE: list other family members' personal repos if shared awareness is helpful, e.g., Brian's]
 - **LLC business:** [https://github.com/Kosek-Advisory-Group-LLC/kosek-consulting](https://github.com/Kosek-Advisory-Group-LLC/kosek-consulting). For engagement work, open a session against that repo, not this one
 
