@@ -36,15 +36,22 @@ one-liner ready. Pick the true version:
 - If you left voluntarily / it's winding down: state that plainly and pivot.
 Do not over-explain. One or two sentences, then redirect to why Carle.
 
-### Salary expectations (DECIDE YOUR NUMBER BEFORE THE CALL)
-The posted band is **$33.72-$58.00/hour** (~$70k-$121k/yr). This is non-exempt/hourly and below a
-typical senior-FP&A salary. The recruiter will likely ask your expectations or confirm the band.
-- Recommended posture: "Based on my experience I'd be targeting the upper half of the posted range.
-  Can you tell me where this role typically lands for someone with 10+ years and ERP-implementation
-  experience?" That anchors high, stays inside their band, and makes them show their hand.
-- Know your personal floor before the call. If the midpoint (~$95k) clears it, this is workable.
-  If only the top of the band clears it, say so politely now rather than after three rounds.
-- Don't volunteer your old SSA salary unless asked; Illinois lets you decline to state prior pay.
+### Salary expectations (DECIDED: target $95k)
+The posted band is **$33.72-$58.00/hour** (~$70k-$121k/yr), non-exempt/hourly.
+- **Target: $95,000/yr = ~$45.67/hour**, which is essentially the **midpoint** of the band
+  (midpoint ~$45.86/hr / ~$95.4k). A clean, defensible ask for 10+ yrs experience plus ERP
+  implementation. Not a reach; leaves room for them to say yes without escalation.
+- **Prior comp context:** last role was $85k base **with employer-paid insurance**. So $95k base
+  only beats it if Carle's benefits don't claw back the difference. Get the comp number AND the
+  benefits/insurance-cost picture on the call.
+- **Script:** "Based on my experience, over ten years in finance plus hands-on ERP implementation,
+  I'm targeting around $95,000, which I believe is right around the midpoint of your posted range.
+  I'd also love to understand the benefits package, since that's a real part of total compensation.
+  Can you tell me where this role typically lands?"
+- Don't lead with the old $85k; Illinois lets you decline prior-pay questions. If pushed: "$85k
+  plus strong employer-paid benefits, which is part of why total comp matters to me here."
+- If they signal the role caps below $95k, treat it as useful early signal and weigh benefits +
+  systems-growth before continuing.
 
 ### Logistics (have clean answers ready)
 - **On-site, Champaign, Day shift, M-F 40 hrs.** You're in Watseka (~45-50 min / ~45 mi each way).
