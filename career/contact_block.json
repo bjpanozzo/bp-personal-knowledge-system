@@ -1,28 +1,26 @@
 {
-  "_doc": "Contact, certifications, and career history read by resume-tailoring (skill #13). This is the RICH schema the engine actually consumes (build_resume.py + build_cover_letter.py). Fill every bracketed [placeholder] with your real value during onboarding and keep the structure; add named roles, education entries, and credential variants as you need them. resume-tailoring refuses to run while any [bracket token] remains (the TD-051 placeholder guard), so a half-filled file fails loudly at load time instead of emitting a misattributed resume. Segments are ordered runs rendered in place: {\"type\":\"text\",\"text\":\"...\"} for plain text, or {\"type\":\"hyperlink\",\"text\":\"...\",\"url_key\":\"<key in cert_urls>\"} for a clickable credential whose URL comes from cert_urls. The *_variants blocks let you keep more than one credential framing (for example a short and a long certifications line); keep the \"default\" entry and add named variants only if a per-application config selects them. For a complete, filled, fictional worked example, see resume-tailoring/applications/_synthetic/career/contact_block.json. No data here is shared outside your own PKS repo.",
+  "_doc": "Contact, certifications, and career history read by resume-tailoring (skill #13). Rich schema consumed by build_resume.py + build_cover_letter.py. Populated 2026-06-21 from Brandon Panozzo's resume. No certifications on file (certifications line intentionally blank). No personal website; website slot repeats LinkedIn per onboarding default. No data here leaves this PKS repo.",
 
   "contact": {
-    "first_name": "[First Name]",
-    "last_name": "[Last Name]",
-    "city": "[City, ST]",
-    "phone": "[(555) 555-5555]",
-    "email": "[you@example.com]",
-    "email_url": "[mailto:you@example.com]",
-    "linkedin_display": "[linkedin.com/in/your-handle]",
-    "linkedin_url": "[https://www.linkedin.com/in/your-handle]",
-    "website_display": "[yoursite.com, or repeat your LinkedIn if you have no site]",
-    "website_url": "[https://yoursite.com]"
+    "first_name": "Brandon",
+    "last_name": "Panozzo",
+    "city": "Watseka, IL",
+    "phone": "(815) 693-7122",
+    "email": "bjpanozzo@gmail.com",
+    "email_url": "mailto:bjpanozzo@gmail.com",
+    "linkedin_display": "linkedin.com/in/brandon-panozzo",
+    "linkedin_url": "https://www.linkedin.com/in/brandon-panozzo-34058813b/",
+    "website_display": "linkedin.com/in/brandon-panozzo",
+    "website_url": "https://www.linkedin.com/in/brandon-panozzo-34058813b/"
   },
 
-  "cert_urls": {
-    "cert_1": "[https://link-to-your-credential-verification]"
-  },
+  "cert_urls": {},
 
   "name_banner_variants": {
     "default": {
       "name_size_pt": 16,
       "segments": [
-        { "type": "text", "text": "[FULL NAME]" }
+        { "type": "text", "text": "BRANDON J. PANOZZO" }
       ]
     }
   },
@@ -31,7 +29,7 @@
     "default": {
       "name_size_pt": 11,
       "segments": [
-        { "type": "text", "text": "[Full Name]" }
+        { "type": "text", "text": "Brandon J. Panozzo" }
       ]
     }
   },
@@ -39,51 +37,56 @@
   "certifications_line_variants": {
     "default": {
       "segments": [
-        { "type": "text", "text": "[Credential name, e.g. Project Management Professional] (" },
-        { "type": "hyperlink", "text": "[CERT]", "url_key": "cert_1" },
-        { "type": "text", "text": ") | [add or remove credentials here, or delete this whole variant if you have none]" }
+        { "type": "text", "text": "" }
       ]
     }
   },
 
   "career_history": {
     "tier_1": {
-      "role_id": "[role-slug, e.g. acme]",
-      "title": "[Most recent job title]",
-      "company": "[Company]",
-      "location": "[City, ST]",
-      "dates": "[YYYY-MM] - [Present]"
+      "role_id": "ssa-sfa",
+      "title": "Senior Financial Analyst",
+      "company": "SSA Marine Terminals (formerly Ceres Terminals)",
+      "location": "Remote",
+      "dates": "2022 - May 2026"
     },
     "tier_2": [
       {
-        "role_id": "[role-slug-2]",
-        "title": "[Prior job title]",
-        "company": "[Company]",
-        "location": "[City, ST]",
-        "dates": "[YYYY-MM] - [YYYY-MM]"
+        "role_id": "ssa-fa",
+        "title": "Financial Analyst",
+        "company": "Ceres Terminals (acquired by SSA Marine)",
+        "location": "Nashville, TN (Remote from 2020)",
+        "dates": "2018 - 2022"
+      },
+      {
+        "role_id": "ssa-staff",
+        "title": "Staff Accountant",
+        "company": "Ceres Terminals",
+        "location": "Nashville, TN",
+        "dates": "2017 - 2018"
       }
     ],
     "tier_3": [
       {
-        "id": "[role-slug-3]",
-        "title": "[Earlier job title, condensed to a single line]",
-        "company": "[Company]",
-        "location": "[City, ST]",
-        "dates": "[YYYY] - [YYYY]"
+        "id": "betty-maclean",
+        "title": "Staff Accountant",
+        "company": "Betty Maclean Travel",
+        "location": "Naples, FL",
+        "dates": "2015 - 2017"
       }
     ]
   },
 
   "education": [
     {
-      "degree": "[Degree, e.g. B.S. Computer Science]",
-      "school": "[School]",
-      "location": "[City, ST]",
-      "capstone": "[Capstone, honors, or a relevant-coursework line, or set to an empty string]"
+      "degree": "B.S. in Business / Finance",
+      "school": "Eastern Illinois University",
+      "location": "Charleston, IL",
+      "capstone": ""
     }
   ],
 
-  "tech_proficiencies_default": "[Tool | Tool | Tool: your technical proficiencies, pipe-separated]",
+  "tech_proficiencies_default": "Hyperion PBCS | NetSuite | JD Edwards & Oracle Smartview | Power Query | Advanced Excel | Ad Hoc Reporting | Data Analytics",
 
-  "languages_line": "[English (native), other languages, or set to an empty string]"
+  "languages_line": "English (native)"
 }

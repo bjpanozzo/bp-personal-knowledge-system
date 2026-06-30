@@ -1,40 +1,188 @@
 {
-  "_doc": "Resume bullet library read by resume-tailoring (skill #13). This is the RICH schema the engine consumes. Each bullet has a stable BK-NNN id, the role tags it targets, competencies, whether it carries a quantified metric, and ATS keywords. role_profiles maps a role tag to its default tagline and about-me text: a per-application config picks a role tag, and the engine resolves the tagline and about-me through role_profiles, so the ids referenced here (tagline_<tag>, about_<tag>) must match the entries in taglines and about_me_versions. Fill every bracketed [placeholder] with your real content during onboarding and add as many bullets as you need (each gets the next free BK-NNN id and status \"active\"). resume-tailoring refuses to run while the bullets list is empty or any [bracket token] remains (the TD-051 placeholder guard). For a complete, filled, fictional worked example, see resume-tailoring/applications/_synthetic/career/bullet_library.json. No data here ever leaves your own PKS repo.",
+  "_doc": "Resume bullet library + resume_config fields read by resume-tailoring (skill #13) via the legacy onboarding fallback (no resume_config.json / evidence-store yet). Bullets carry stable BK-NNN ids. role_profiles maps a role tag to its default tagline and about-me. Populated 2026-06-21 from Brandon Panozzo's resume. No data here leaves this PKS repo.",
 
   "bullets": [
     {
       "id": "BK-001",
-      "text": "[One accomplishment, ideally with a number. Example: Cut order-processing time 35 percent by redesigning the fulfillment workflow.]",
-      "role_targets": ["[role-tag, e.g. operations]"],
-      "competencies": ["[competency, e.g. process-improvement]"],
+      "text": "Generated standard and ad hoc reports and finance metrics in NetSuite to support management and executive decision-making",
+      "role_targets": ["finance"],
+      "competencies": ["financial-reporting", "data-analysis"],
+      "has_metric": false,
+      "ats_keywords": ["financial reporting", "ad hoc reporting", "NetSuite", "data analysis"],
+      "status": "active"
+    },
+    {
+      "id": "BK-002",
+      "text": "Built and maintained annual budget and rolling forecast models in Hyperion PBCS",
+      "role_targets": ["finance"],
+      "competencies": ["financial-modeling", "forecasting", "budgeting"],
+      "has_metric": false,
+      "ats_keywords": ["financial modeling", "budgeting", "forecasting", "Hyperion PBCS"],
+      "status": "active"
+    },
+    {
+      "id": "BK-003",
+      "text": "Led the finance team through the ERP transition from JD Edwards to NetSuite and Oracle Hyperion/PBCS, including system testing, data-integrity validation, and end-user support",
+      "role_targets": ["finance"],
+      "competencies": ["system-implementation", "leadership", "process-improvement"],
+      "has_metric": false,
+      "ats_keywords": ["system implementation", "ERP", "NetSuite", "data integrity", "change management"],
+      "status": "active"
+    },
+    {
+      "id": "BK-004",
+      "text": "Prepared monthly internal and external financial statements for the Board of Directors",
+      "role_targets": ["finance"],
+      "competencies": ["financial-reporting"],
+      "has_metric": false,
+      "ats_keywords": ["financial statements", "board reporting", "GAAP"],
+      "status": "active"
+    },
+    {
+      "id": "BK-005",
+      "text": "Owned accurate monthly P&L, balance sheet, and cash flow statements across the business",
+      "role_targets": ["finance"],
+      "competencies": ["financial-reporting"],
+      "has_metric": false,
+      "ats_keywords": ["P&L", "balance sheet", "cash flow", "month-end close"],
+      "status": "active"
+    },
+    {
+      "id": "BK-006",
+      "text": "Produced monthly P&L for 15 cost centers with actual-versus-budget variance analysis for management review",
+      "role_targets": ["finance"],
+      "competencies": ["variance-analysis", "financial-reporting"],
       "has_metric": true,
-      "ats_keywords": ["[keyword]", "[keyword]"],
+      "metric_detail": "15 cost centers",
+      "ats_keywords": ["variance analysis", "P&L", "budget vs actual", "cost center reporting"],
+      "status": "active"
+    },
+    {
+      "id": "BK-007",
+      "text": "Partnered with the CFO on variance-analysis presentations and supported quarterly internal audit requests",
+      "role_targets": ["finance"],
+      "competencies": ["business-partnering", "stakeholder-management"],
+      "has_metric": false,
+      "ats_keywords": ["business partner", "executive presentations", "variance analysis", "internal audit"],
+      "status": "active"
+    },
+    {
+      "id": "BK-008",
+      "text": "Identified process-improvement opportunities and automated month-end reporting by implementing Power Query",
+      "role_targets": ["finance"],
+      "competencies": ["process-improvement", "automation", "data-analysis"],
+      "has_metric": false,
+      "ats_keywords": ["process improvement", "automation", "Power Query", "month-end close"],
+      "status": "active"
+    },
+    {
+      "id": "BK-009",
+      "text": "Served as liaison between finance end users, IT, and external vendors to research and resolve system and reporting issues",
+      "role_targets": ["finance"],
+      "competencies": ["stakeholder-management", "cross-functional-collaboration"],
+      "has_metric": false,
+      "ats_keywords": ["stakeholder management", "cross-functional", "systems support"],
+      "status": "active"
+    },
+    {
+      "id": "BK-010",
+      "text": "Streamlined the payroll reconciliation process for 15 cost centers, shortening the cycle by one week",
+      "role_targets": ["finance"],
+      "competencies": ["process-improvement"],
+      "has_metric": true,
+      "metric_detail": "cut cycle by one week across 15 cost centers",
+      "ats_keywords": ["process improvement", "reconciliation", "efficiency"],
+      "status": "active"
+    },
+    {
+      "id": "BK-011",
+      "text": "Analyzed P&L accounts at month-end to explain variances in support of the Controller",
+      "role_targets": ["finance"],
+      "competencies": ["variance-analysis"],
+      "has_metric": false,
+      "ats_keywords": ["variance analysis", "P&L", "month-end close"],
+      "status": "active"
+    },
+    {
+      "id": "BK-012",
+      "text": "Maintained fixed-asset detail, including additions, CIP transfers, and disposals",
+      "role_targets": ["finance"],
+      "competencies": ["accounting-operations"],
+      "has_metric": false,
+      "ats_keywords": ["fixed assets", "CIP", "general ledger"],
+      "status": "active"
+    },
+    {
+      "id": "BK-013",
+      "text": "Managed monthly, quarterly, and year-end closings under strict deadlines while mentoring junior accountants",
+      "role_targets": ["finance"],
+      "competencies": ["close-management", "leadership"],
+      "has_metric": false,
+      "ats_keywords": ["month-end close", "year-end close", "GAAP", "mentoring"],
+      "status": "active"
+    },
+    {
+      "id": "BK-014",
+      "text": "Built the ERP account structure (chart of accounts) and integrated it with the billing module during the implementation of NetSuite and Oracle Hyperion",
+      "role_targets": ["finance"],
+      "competencies": ["system-implementation", "erp-configuration", "process-improvement"],
+      "has_metric": false,
+      "ats_keywords": ["ERP", "chart of accounts", "system configuration", "NetSuite", "Oracle Hyperion", "billing integration"],
+      "status": "active"
+    },
+    {
+      "id": "BK-015",
+      "text": "Closed the books and supported internal and external audits and tax filings through four ownership changes, maintaining reporting continuity across each transaction",
+      "role_targets": ["finance"],
+      "competencies": ["close-management", "audit-support", "financial-reporting"],
+      "has_metric": false,
+      "ats_keywords": ["month-end close", "internal audit", "external audit", "tax", "M&A", "due diligence"],
+      "status": "active"
+    },
+    {
+      "id": "BK-016",
+      "text": "Supplied financial data and reporting to support a KPMG company valuation tied to a sale exceeding $1 billion",
+      "role_targets": ["finance"],
+      "competencies": ["financial-reporting", "due-diligence"],
+      "has_metric": true,
+      "metric_detail": "$1B+ sale valuation",
+      "ats_keywords": ["valuation", "due diligence", "M&A", "financial reporting"],
+      "status": "active"
+    },
+    {
+      "id": "BK-017",
+      "text": "Selected as one of five team members retained from a 100-person corporate finance office following acquisition by SSA Marine",
+      "role_targets": ["finance"],
+      "competencies": ["leadership", "resilience"],
+      "has_metric": true,
+      "metric_detail": "1 of 5 retained from 100",
+      "ats_keywords": ["retention", "acquisition", "consolidation"],
       "status": "active"
     }
   ],
 
   "about_me_versions": [
     {
-      "id": "about_[role-tag]",
-      "text": "[Two to four sentence professional summary for this role target. Lead with your years and scope, then what you own end to end. Leave a blank line to split it into two short paragraphs if you want.]"
+      "id": "about_finance",
+      "text": "Accounting and finance professional with over 10 years of progressively responsible experience specializing in financial planning and analysis, reporting, and financial systems within a multinational organization. Proven record of leading ERP and planning-system implementations, building budget and forecast models, and turning financial data into clear insights that drive executive decision-making."
     }
   ],
 
   "taglines": [
     {
-      "id": "tagline_[role-tag]",
-      "text": "[Headline line 1]\n[Headline line 2]\n[Headline line 3]",
-      "use_when": "[When to reach for this tagline, e.g. general operations and program-management roles]"
+      "id": "tagline_finance",
+      "text": "Senior Financial Analyst | FP&A and Financial Systems\nBudget and Forecast Modeling | Variance Analysis\nTurning Financial Data into Executive Insight",
+      "use_when": "FP&A, strategic finance, senior financial analyst, and financial-systems roles"
     }
   ],
 
-  "role_targets": ["[role-tag, e.g. operations]"],
+  "role_targets": ["finance"],
 
   "role_profiles": {
-    "[role-tag, e.g. operations]": {
-      "tagline": "tagline_[role-tag]",
-      "about_me_default": "about_[role-tag]",
-      "description": "[What kinds of roles this profile targets]"
+    "finance": {
+      "tagline": "tagline_finance",
+      "about_me_default": "about_finance",
+      "description": "FP&A, strategic finance, senior financial analyst, and financial-systems business-partner roles"
     }
   }
 }
